@@ -8,6 +8,7 @@ import org.springframework.web.servlet.ModelAndView
 class PublicController {
     @GetMapping("/")
     fun index(): ModelAndView {
+
         return ModelAndView("pages/index")
     }
 }
