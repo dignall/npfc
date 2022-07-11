@@ -1,14 +1,26 @@
+{# @pebvariable name="model" type="org.koil.public.IndexViewModel" #}
+
     {% extends "layouts/public" %}
-        {% block title %} Home {% endblock %}
+    {% block title %} Home {% endblock %}
 
-    {% block content %}
-    <hgroup>
-        <h2>
-            NPFC Training Combo Selector
-        </h2>
-        <h3>
+{% block content %}
+<hgroup>
+    <h2>
+        NPFC Training Combo Selector
+    </h2>
+    <h3>
         Choose combos from your Nintendo Pocket Football Club cards.
-        </h3>
-    </hgroup>
+    </h3>
+</hgroup>
 
-    {% endblock %}
+<body>
+<ul>
+        {% for card in model.allCards %}
+        <li>{{ card }}
+            <input type="checkbox">
+        </li>
+        {% endfor %}
+</ul>
+<button type="submit" class="button">Update</button>
+</body>
+{% endblock %}

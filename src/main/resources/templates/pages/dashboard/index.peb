@@ -1,6 +1,6 @@
 {# @pebvariable name="model" type="org.koil.dashboard.IndexViewModel" #}
 
-    {% extends "layouts/dashboard-layout" %}
+{% extends "layouts/dashboard-layout" %}
     {% block title %} Home {% endblock %}
 {% block content %}
 <div data-test="dashboard-index"></div>
