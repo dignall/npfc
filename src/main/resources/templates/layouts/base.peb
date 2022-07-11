@@ -4,10 +4,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block meta %}{% endblock %}
-    <title>Koil | {% block title %}{% endblock %}</title>
+    <title>NPFC | {% block title %}{% endblock %}</title>
     <meta name="description" content="
     {% block description %}
-        Koil is an integrated web development framework focused on productivity.
+        NPFC Card Selector helps you choose combos from your cards
     {% endblock %}
 ">
     <link rel="stylesheet" type="text/css" href="{{ mix("/css/packs/app.css") }}">

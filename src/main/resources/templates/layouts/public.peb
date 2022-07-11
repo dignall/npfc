@@ -4,21 +4,21 @@
     <body data-layout="public">
     <nav class="container-fluid" data-controller="toggle">
         <ul>
-            <li><h1>Koil.</h1></li>
+            <li><h1>NPFC Card Selector</h1></li>
         </ul>
 
-        <ul>
-            <li>
-                <a class="button is-primary" href="/auth/login">
-                    Login
-                </a>
-            </li>
-            <li>
-                <a class="button is-primary" href="/auth/register/organization">
-                    Sign up
-                </a>
-            </li>
-        </ul>
+{#        <ul>#}
+{#            <li>#}
+{#                <a class="button is-primary" href="/auth/login">#}
+{#                    Login#}
+{#                </a>#}
+{#            </li>#}
+{#            <li>#}
+{#                <a class="button is-primary" href="/auth/register/organization">#}
+{#                    Sign up#}
+{#                </a>#}
+{#            </li>#}
+{#        </ul>#}
     </nav>
     <main class="container">
         <article>
@@ -28,7 +28,7 @@
     <footer class="container-fluid">
         <div class="hero-foot">
             <div class="container has-text-centered">
-                <p>Built by <a href="https://www.happyvalley.io">Happy Valley IO</a>.</p>
+{#                <p>Here We Go again</p>#}
             </div>
         </div>
     </footer>
