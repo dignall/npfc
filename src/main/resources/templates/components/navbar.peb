@@ -2,7 +2,7 @@
 
 <nav class="container-fluid" data-controller="toggle">
     <ul>
-        <li><h1>Koil.</h1></li>
+        <li><h1>NPFC Card Selector</h1></li>
     </ul>
     <ul class="is-hidden-mobile" data-test="desktop-navbar">
         <li>

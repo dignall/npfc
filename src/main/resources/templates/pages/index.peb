@@ -4,18 +4,11 @@
     {% block content %}
     <hgroup>
         <h2>
-            Koil
+            NPFC Training Combo Selector
         </h2>
         <h3>
-            A starter template for Spring-based SaaS
+        Choose combos from your Nintendo Pocket Football Club cards.
         </h3>
     </hgroup>
-    <form action="/auth/register/organization">
-        <label>Sign up email address
-            <input id="email-input" type="email" name="email"
-                   placeholder="jane.doe@example.com"
-                   data-test="sign-up-email" required>
-        </label>
-        <button class="button is-primary">Join</button>
-    </form>
+
     {% endblock %}
