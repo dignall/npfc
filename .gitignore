@@ -40,3 +40,4 @@ src/test/resources/regression/**/*.diff
 docs/site
 
 .ideaDataSources/
+dataSources/
