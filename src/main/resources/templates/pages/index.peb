@@ -15,36 +15,48 @@
 </hgroup>
 <body>
 
-<p>Select all cards you own using the checkboxes then click "Update" - possible combos will appear.</p>
-<div data-controller="select-all">
-    <button data-action="select-all#selectAll">Select All</button>
-    <form method="get" action="/">
-        <div id="card-lists" style="display: flex">
-                {% for type in model.allTypes %}
-                <div>
-                    <h6>{{ type }}</h6>
-                    <ul>
-                        {% set cards=model.cardsByType[type] %}
-                        {% for card in cards %}
-                            <li style="list-style-type: none">
-                                <section>
-                                    <input type="checkbox"
-                                           name="cardOwned"
-                                           value="{{ card }}"
-                                           data-select-all-target="selectable"
-                                        {% if model.cardShouldBeChecked(card) %}
-                                           checked
-                                        {% endif %}
-                                    > {{ card }}
-                                </section>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% endfor %}
-        </div>
-        <button type="submit" class="button">Update</button>
-    </form>
+<div id="combos">
+    <ul>
+            {% for combo in model.potentialCombos %}
+            <li>{{ combo }}</li>
+            {% endfor %}
+    </ul>
+</div>
+
+<div id="cards">
+    <p>Select all cards you own using the checkboxes then click "Update" - possible combos will appear.</p>
+    <div data-controller="select-all">
+        <button data-action="select-all#selectAll">Select All</button>
+        <form method="get" action="/">
+            <div id="card-lists" style="display: flex">
+                    {% for type in model.allTypes %}
+                    <div>
+                        <h6>{{ type }}</h6>
+                        <ul>
+                            {% set cards=model.cardsByType[type] %}
+                            {% for card in cards %}
+                                <li style="list-style-type: none">
+                                    <section>
+                                        <label>
+                                            <input type="checkbox"
+                                                   name="cardOwned"
+                                                   value="{{ card }}"
+                                                   data-select-all-target="selectable"
+                                                {% if model.cardShouldBeChecked(card) %}
+                                                   checked
+                                                {% endif %}
+                                            > {{ card }}
+                                        </label>
+                                    </section>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+            </div>
+            <button type="submit" class="button">Update</button>
+        </form>
+    </div>
 </div>
 </body>
 {% endblock %}
