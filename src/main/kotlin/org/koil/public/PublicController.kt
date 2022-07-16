@@ -1,5 +1,6 @@
 package org.koil.public
 
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
@@ -10,12 +11,15 @@ data class IndexViewModel(
     val allTypes: List<CardType>,
     val cardsByType: Map<CardType, List<Card>>,
     val ownedCards: List<Card>,
+    val potentialCombos: List<Combo>,
 ) {
     fun cardShouldBeChecked(card: Card): Boolean = ownedCards.contains(card)
+
+    fun hasCombos(): Boolean = potentialCombos.isNotEmpty()
 }
 
 @Controller
-class PublicController {
+class PublicController(@Autowired private val comboService: IComboService) {
     @GetMapping("/")
     fun index(
         @RequestParam(required = false) cardOwned: List<Card>? = listOf(),
@@ -29,7 +33,9 @@ class PublicController {
             allCards.filter { card -> card.cardType == cardType }
         }
 
-        val model = IndexViewModel(allCards, allTypes, cardsByType, ownedCards)
+        val potentialCombos = comboService.getPotentialCombos(ownedCards)
+
+        val model = IndexViewModel(allCards, allTypes, cardsByType, ownedCards, potentialCombos)
         return ModelAndView("pages/index", mapOf("model" to model))
     }
 }
