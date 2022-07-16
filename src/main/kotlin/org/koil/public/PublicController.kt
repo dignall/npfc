@@ -14,6 +14,8 @@ data class IndexViewModel(
     val potentialCombos: List<Combo>,
 ) {
     fun cardShouldBeChecked(card: Card): Boolean = ownedCards.contains(card)
+
+    fun hasCombos(): Boolean = potentialCombos.isNotEmpty()
 }
 
 @Controller
@@ -31,7 +33,7 @@ class PublicController(@Autowired private val comboService: IComboService) {
             allCards.filter { card -> card.cardType == cardType }
         }
 
-        val potentialCombos = comboService.getCombos(ownedCards)
+        val potentialCombos = comboService.getPotentialCombos(ownedCards)
 
         val model = IndexViewModel(allCards, allTypes, cardsByType, ownedCards, potentialCombos)
         return ModelAndView("pages/index", mapOf("model" to model))
