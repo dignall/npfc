@@ -42,4 +42,5 @@ enum class Card(val cardType: CardType) {
     SPA(CardType.SUPPORT),
     GAMING(CardType.SUPPORT),
     MINICAMP(CardType.SUPPORT),
+    KARAOKE(CardType.SUPPORT)
 }
