@@ -20,7 +20,7 @@ enum class Card(val cardType: CardType) {
     PLACEKICKS(CardType.TECHNICAL),
     SHOOTING(CardType.TECHNICAL),
     PASSING(CardType.TECHNICAL),
-    FREESTYLE(CardType.TECHNICAL),
+    FREESTYLING(CardType.TECHNICAL),
     SLIDING(CardType.TECHNICAL),
     HEADING(CardType.TECHNICAL),
 

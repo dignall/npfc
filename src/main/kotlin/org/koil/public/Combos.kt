@@ -45,7 +45,15 @@ enum class Combo(
     RUSH_ATTACK(
         cards = listOf(Card.DRIBBLING, Card.PASSING, Card.SIGNING),
         effects = Effects(kicking = 3, speed = 10, stamina = 6, technique = 4, jumping = 6)
-    )
+    ),
+    HARD_DYNAMO(
+        cards = listOf(Card.PRESSURING, Card.RUNNING, Card.AGILITY),
+        effects = Effects(speed = 10, stamina = 14, technique = 5)
+    ),
+    PHANTOM_DRIBBLER(
+        cards = listOf(Card.DRIBBLING, Card.AEROBICS, Card.FREESTYLING),
+        effects = Effects(speed = 14, stamina = 6, technique = 7)
+    ),
     ;
 
     fun total(): Int =
