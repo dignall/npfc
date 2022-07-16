@@ -14,8 +14,6 @@ data class IndexViewModel(
     fun cardShouldBeChecked(card: Card): Boolean = ownedCards.contains(card)
 }
 
-data class CardOwned(val card: Card, val owned: Boolean)
-
 @Controller
 class PublicController {
     @GetMapping("/")
