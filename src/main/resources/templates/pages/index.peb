@@ -13,8 +13,8 @@
         Choose combos from your Nintendo Pocket Football Club cards.
     </h3>
 </hgroup>
-
 <body>
+
 <p>Select all cards you own using the checkboxes then click "Update" - possible combos will appear.</p>
 <div data-controller="select-all">
     <button data-action="select-all#selectAll">Select All</button>
