@@ -14,13 +14,32 @@
 </hgroup>
 
 <body>
-<ul>
-        {% for card in model.allCards %}
-        <li>{{ card }}
-            <input type="checkbox">
-        </li>
+    {#<ul>#}
+    {#        {% for card in model.allCards %}#}
+    {#        <li>{{ card }}#}
+    {#            <input type="checkbox">#}
+    {#        </li>#}
+    {#        {% endfor %}#}
+    {#</ul>#}
+
+<p>Select all which you have then click "Update" - possible combos will appear.</p>
+<div id="card-lists" style="display: flex">
+        {% for type in model.allTypes %}
+        <div>
+            <h6>{{ type }}</h6>
+            <ul>
+                {% set cards=model.cardsByType[type] %}
+                {% for card in cards %}
+                    <li style="list-style-type: none">
+                        <section>
+                            <input type="checkbox" name="card" value="{{ card }}"> {{ card }}
+                        </section>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
         {% endfor %}
-</ul>
+</div>
 <button type="submit" class="button">Update</button>
 </body>
 {% endblock %}
