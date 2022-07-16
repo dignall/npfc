@@ -1,0 +1,17 @@
+package org.koil.public
+
+import org.springframework.stereotype.Service
+
+interface IComboService {
+    fun getCombos(cards: List<Card>): List<Combo>
+}
+
+@Service
+class ComboService : IComboService {
+    val allCombos = Combo.values().toList()
+
+    override fun getCombos(cards: List<Card>): List<Combo> {
+        return allCombos.filter { combo -> combo.cards.containsAll(cards) }
+    }
+
+}
