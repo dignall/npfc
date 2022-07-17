@@ -45,27 +45,19 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
-    implementation("org.springframework.boot:spring-boot-starter-jdbc")
-    implementation("org.springframework.boot:spring-boot-starter-mail")
-    implementation("org.springframework.data:spring-data-jdbc")
-    implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-validation")
 
     implementation("io.micrometer:micrometer-core")
     implementation("io.micrometer:micrometer-registry-prometheus")
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-    implementation("org.flywaydb:flyway-core")
     implementation('io.pebbletemplates:pebble-spring-boot-starter:3.1.5')
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-    implementation 'com.amazonaws:aws-java-sdk-s3:1.12.111'
     implementation('com.squareup.okhttp3:okhttp:4.9.2')
     implementation("org.imgscalr:imgscalr-lib:4.2")
 
-    implementation('io.sentry:sentry-spring-boot-starter:5.3.0')
     implementation('org.jsoup:jsoup:1.14.3')
     implementation('dev.forkhandles:result4k:1.11.2.0')
 
@@ -74,7 +66,6 @@ dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     developmentOnly('io.github.kilmajster:ngrok-spring-boot-starter:0.5.0')
 
-    runtimeOnly('org.postgresql:postgresql:42.3.1')
     implementation(platform("org.testcontainers:testcontainers-bom:1.16.2"))
     testImplementation('org.testcontainers:postgresql:1.16.0')
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
