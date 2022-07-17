@@ -14,3 +14,7 @@
 .warning {
     color: var(--warning-color);
 }
+
+button {
+    background-color: darkgreen;
+}

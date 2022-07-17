@@ -2,25 +2,7 @@
 
     {% block body %}
     <body data-layout="public">
-    <nav class="container-fluid" data-controller="toggle">
-        <ul>
-            <li><h1>NPFC Card Selector</h1></li>
-        </ul>
-
-{#        <ul>#}
-{#            <li>#}
-{#                <a class="button is-primary" href="/auth/login">#}
-{#                    Login#}
-{#                </a>#}
-{#            </li>#}
-{#            <li>#}
-{#                <a class="button is-primary" href="/auth/register/organization">#}
-{#                    Sign up#}
-{#                </a>#}
-{#            </li>#}
-{#        </ul>#}
-    </nav>
-    <main class="container">
+    <main>
         <article>
                 {% block content %}{% endblock %}
         </article>
@@ -28,7 +10,7 @@
     <footer class="container-fluid">
         <div class="hero-foot">
             <div class="container has-text-centered">
-{#                <p>Here We Go again</p>#}
+                {#                <p>Here We Go again</p>#}
             </div>
         </div>
     </footer>
