@@ -30,13 +30,13 @@
             <tr>
                 <th class="name">Name</th>
                 <th class="cards">Cards</th>
-                <th>Kick</th>
-                <th>Speed</th>
-                <th>Stam</th>
-                <th>Tech</th>
-                <th>Tough</th>
-                <th>Jump</th>
-                <th>Will</th>
+                <th class="is-hidden-mobile">Kick</th>
+                <th class="is-hidden-mobile">Speed</th>
+                <th class="is-hidden-mobile">Stam</th>
+                <th class="is-hidden-mobile">Tech</th>
+                <th class="is-hidden-mobile">Tough</th>
+                <th class="is-hidden-mobile">Jump</th>
+                <th class="is-hidden-mobile">Will</th>
                 <th>Total</th>
             </tr>
             </thead>
@@ -45,13 +45,13 @@
                 <tr>
                     <td class="name">{{ combo.displayName }}</td>
                     <td class="cards">{{ combo.cards }}</td>
-                    <td>{{ combo.effects.kicking }}</td>
-                    <td>{{ combo.effects.speed }}</td>
-                    <td>{{ combo.effects.stamina }}</td>
-                    <td>{{ combo.effects.technique }}</td>
-                    <td>{{ combo.effects.toughness }}</td>
-                    <td>{{ combo.effects.jumping }}</td>
-                    <td>{{ combo.effects.willpower }}</td>
+                    <td class="is-hidden-mobile">{{ combo.effects.kicking }}</td>
+                    <td class="is-hidden-mobile">{{ combo.effects.speed }}</td>
+                    <td class="is-hidden-mobile">{{ combo.effects.stamina }}</td>
+                    <td class="is-hidden-mobile">{{ combo.effects.technique }}</td>
+                    <td class="is-hidden-mobile">{{ combo.effects.toughness }}</td>
+                    <td class="is-hidden-mobile">{{ combo.effects.jumping }}</td>
+                    <td class="is-hidden-mobile">{{ combo.effects.willpower }}</td>
                     <td>{{ combo.total }}</td>
                 </tr>
                     {% endfor %}
@@ -74,7 +74,7 @@
         <form method="get" action="/">
             <button type="submit" class="button">Update</button>
             <button type="button" data-action="select-all#selectAll">Select All</button>
-            <div id="card-lists" style="display: flex">
+            <div id="card-lists" style="display: flex; flex-wrap: wrap">
                     {% for type in model.allTypes %}
                     <div>
                         <h6>{{ type }}</h6>
