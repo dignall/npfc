@@ -1,0 +1,19 @@
+/* Help tooltip class */
+table {
+    table-layout: fixed;
+}
+
+th {
+    font-size: small;
+    text-decoration: underline;
+}
+
+td {
+    font-size: smaller;
+    text-align: right;
+    padding: 1em;
+}
+
+.name {
+    text-align: left!important;
+}

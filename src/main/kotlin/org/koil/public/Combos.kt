@@ -422,5 +422,7 @@ enum class Combo(
 
     fun total(): Int =
         effects.kicking + effects.speed + effects.stamina + effects.technique + effects.toughness + effects.jumping + effects.willpower
+
+    fun displayName(): String = name.replace("_", " ")
 }
 

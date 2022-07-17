@@ -5,6 +5,7 @@
 
 @import "../components/slide-menu.css";
 @import "../components/help-tooltip.css";
+@import "../components/table.css";
 
 /* Grid */
 body > main {
