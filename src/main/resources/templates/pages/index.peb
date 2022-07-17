@@ -30,14 +30,14 @@
             <tr>
                 <th class="name">Name</th>
                 <th class="cards">Cards</th>
-                <th class="is-hidden-mobile">Kick</th>
-                <th class="is-hidden-mobile">Speed</th>
-                <th class="is-hidden-mobile">Stam</th>
-                <th class="is-hidden-mobile">Tech</th>
-                <th class="is-hidden-mobile">Tough</th>
-                <th class="is-hidden-mobile">Jump</th>
-                <th class="is-hidden-mobile">Will</th>
-                <th>Total</th>
+                <th class="is-hidden-mobile"><a href="{{ model.sortUrl("kicking") }}"> Kick</a></th>
+                <th class="is-hidden-mobile"><a href="{{ model.sortUrl("speed") }}">Speed</a></th>
+                <th class="is-hidden-mobile"><a href="{{ model.sortUrl("stamina") }}">Stam</a></th>
+                <th class="is-hidden-mobile"><a href="{{ model.sortUrl("technique") }}">Tech</a></th>
+                <th class="is-hidden-mobile"><a href="{{ model.sortUrl("toughness") }}">Tough</a></th>
+                <th class="is-hidden-mobile"><a href="{{ model.sortUrl("jumping") }}">Jump</a></th>
+                <th class="is-hidden-mobile"><a href="{{ model.sortUrl("willpower") }}">Will</a></th>
+                <th><a href="{{ model.sortUrl("total") }}">Total</a></th>
             </tr>
             </thead>
             <tbody>
@@ -61,7 +61,7 @@
     {% endif %}
 
 <section id="cards">
-    <div  style="display: flex">
+    <div style="display: flex">
         <h3>Cards</h3>
         {% if model.hasCombos %}
             <a href="#combos" style="margin-right:2em; margin-left: auto">
