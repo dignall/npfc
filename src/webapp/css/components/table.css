@@ -1,0 +1,31 @@
+/* Help tooltip class */
+table {
+    table-layout: fixed;
+    width: 100%;
+
+}
+
+th {
+    font-size: small;
+    text-decoration: underline;
+
+}
+
+td {
+    font-size: smaller;
+    text-align: right;
+    width: 600px;
+    padding: 1em;
+
+}
+
+.name {
+    text-align: left!important;
+    /*overflow-wrap: break-word;*/
+    padding: 1.5em;
+
+}
+.cards {
+    padding: 2em;
+
+}

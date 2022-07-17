@@ -18,17 +18,57 @@
 
     {% if model.hasCombos %}
     <section id="combos">
-        <h3>Combos</h3>
-        <ul>
-                {% for combo in model.potentialCombos %}
-                <li>{{ combo }}</li>
-                {% endfor %}
-        </ul>
+        <div style="display: flex">
+            <h3>Combos</h3>
+            <a href="#cards" style="margin-right:2em; margin-left: auto">
+                <button>Jump to Cards section</button>
+            </a>
+        </div>
+        <p>These are all the combos possible with your selected cards</p>
+        <table>
+            <thead>
+            <tr>
+                <th class="name">Name</th>
+                <th class="cards">Cards</th>
+                <th>Kick</th>
+                <th>Speed</th>
+                <th>Stam</th>
+                <th>Tech</th>
+                <th>Tough</th>
+                <th>Jump</th>
+                <th>Will</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody>
+                    {% for combo in model.potentialCombos %}
+                <tr>
+                    <td class="name">{{ combo.displayName }}</td>
+                    <td class="cards">{{ combo.cards }}</td>
+                    <td>{{ combo.effects.kicking }}</td>
+                    <td>{{ combo.effects.speed }}</td>
+                    <td>{{ combo.effects.stamina }}</td>
+                    <td>{{ combo.effects.technique }}</td>
+                    <td>{{ combo.effects.toughness }}</td>
+                    <td>{{ combo.effects.jumping }}</td>
+                    <td>{{ combo.effects.willpower }}</td>
+                    <td>{{ combo.total }}</td>
+                </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
     </section>
     {% endif %}
 
 <section id="cards">
-    <h3>Cards</h3>
+    <div  style="display: flex">
+        <h3>Cards</h3>
+        {% if model.hasCombos %}
+            <a href="#combos" style="margin-right:2em; margin-left: auto">
+                <button>Jump to Combos section</button>
+            </a>
+        {% endif %}
+    </div>
     <p>Select all cards you own using the checkboxes then click "Update" - possible combos will appear.</p>
     <div data-controller="select-all">
         <form method="get" action="/">
