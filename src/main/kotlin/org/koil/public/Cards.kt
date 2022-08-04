@@ -40,7 +40,7 @@ enum class Card(val cardType: CardType) {
     VISUALISING(CardType.SUPPORT),
     MEETING(CardType.SUPPORT),
     SPA(CardType.SUPPORT),
-    GAMING(CardType.SUPPORT),
     MINICAMP(CardType.SUPPORT),
+    GAMING(CardType.SUPPORT),
     KARAOKE(CardType.SUPPORT)
 }
