@@ -76,14 +76,14 @@
             <button type="button" data-action="select-all#selectAll">Select All</button>
             <div id="card-lists" style="display: flex; flex-wrap: wrap">
                     {% for type in model.allTypes %}
-                    <div>
-                        <h6>{{ type }}</h6>
+                    <div class="{{ type.toLowercase() }} training-cards">
+                        <h6><u class="card-text">{{ type }}</u></h6>
                         <ul>
                             {% set cards=model.cardsByType[type] %}
                             {% for card in cards %}
                                 <li style="list-style-type: none">
                                     <section>
-                                        <label>
+                                        <label class="card-text">
                                             <input type="checkbox"
                                                    name="cardOwned"
                                                    value="{{ card }}"

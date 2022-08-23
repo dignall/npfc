@@ -105,3 +105,29 @@ label + button {
 fieldset + * {
     margin-top: 2em;
 }
+
+.training-cards {
+    padding: 10px;
+    margin: .5em;
+    border-radius: 10px;
+}
+
+.card-text{
+    color: black;
+}
+
+.tactical {
+    background-color: forestgreen;
+}
+
+.technical {
+    background-color: indianred;
+}
+
+.physical {
+    background-color: dodgerblue;
+}
+
+.support {
+    background-color: gold;
+}

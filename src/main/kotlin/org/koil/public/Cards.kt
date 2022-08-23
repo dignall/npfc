@@ -4,7 +4,9 @@ enum class CardType {
     TACTICAL,
     TECHNICAL,
     PHYSICAL,
-    SUPPORT
+    SUPPORT;
+
+    fun toLowercase():String = this.toString().lowercase()
 }
 
 enum class Card(val cardType: CardType) {
