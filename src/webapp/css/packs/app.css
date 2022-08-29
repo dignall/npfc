@@ -111,6 +111,7 @@ fieldset + * {
     border-radius: 10px;
     width: 45%;
     max-width: 200px;
+    background-color: darkslategray;
 }
 
 .card-text{
