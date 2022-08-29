@@ -19,7 +19,10 @@
     {% if model.hasCombos %}
     <section id="combos">
         <div style="display: flex">
-            <h3>Combos</h3>
+            <h3 style="padding-right: 3px">Combos</h3>
+            <a href="{{ model.currentUrl() }}&keeperOnly=true" style="margin-right:2em; margin-left: auto">
+                <button>GK Only</button>
+            </a>
             <a href="#cards" style="margin-right:2em; margin-left: auto">
                 <button>Jump to Cards section</button>
             </a>

@@ -18,3 +18,19 @@
 button {
     background-color: forestgreen;
 }
+
+.tactical {
+    background-color: forestgreen;
+}
+
+.technical {
+    background-color: indianred;
+}
+
+.physical {
+    background-color: dodgerblue;
+}
+
+.support {
+    background-color: gold;
+}

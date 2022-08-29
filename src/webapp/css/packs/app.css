@@ -1,5 +1,4 @@
 @import "../../node_modules/@picocss/pico/css/pico.css";
-@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 @import "../themes/_theme.css";
 @import "../utlities/utilities.css";
 
@@ -110,24 +109,10 @@ fieldset + * {
     padding: 10px;
     margin: .5em;
     border-radius: 10px;
+    width: 45%;
+    max-width: 200px;
 }
 
 .card-text{
     color: black;
-}
-
-.tactical {
-    background-color: forestgreen;
-}
-
-.technical {
-    background-color: indianred;
-}
-
-.physical {
-    background-color: dodgerblue;
-}
-
-.support {
-    background-color: gold;
 }
