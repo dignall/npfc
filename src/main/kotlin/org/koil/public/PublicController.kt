@@ -40,6 +40,7 @@ class PublicController(@Autowired private val comboService: IComboService) {
     fun index(
         @RequestParam(required = false) cardOwned: List<Card>? = listOf(),
         @RequestParam(required = false) sort: String? = "total",
+        @RequestParam(required = false) keeperOnly: Boolean = false,
     ): ModelAndView {
         val allCards = Card.values().toList()
         val allTypes = CardType.values().toList()
@@ -50,7 +51,10 @@ class PublicController(@Autowired private val comboService: IComboService) {
             allCards.filter { card -> card.cardType == cardType }
         }
 
-        val potentialCombos = comboService.getPotentialCombos(ownedCards)
+        val allPotentialCombos = comboService.getPotentialCombos(ownedCards)
+
+        val potentialCombos =
+            if (keeperOnly) allPotentialCombos.filter { it.keeperOnly } else allPotentialCombos
 
         val sortedCombos =
             when (sort) {
