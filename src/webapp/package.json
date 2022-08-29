@@ -16,7 +16,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@chialab/esbuild-plugin-postcss": "^0.17.1",
+    "@chialab/esbuild-plugin-postcss": "^0.12.37",
     "@deanc/esbuild-plugin-postcss": "^1.0.2",
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "@snowpack/plugin-postcss": "^1.4.3",

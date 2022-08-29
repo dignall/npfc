@@ -5,8 +5,7 @@
     cursor: pointer;
 }
 
-.is-helped {
-}
+.is-helped {}
 
 .btn-slim {
     margin: 0;
@@ -34,21 +33,4 @@
 
 .profile-image.large {
     --profile-image-size: 6rem;
-}
-
-
-.tactical {
-    background-color: forestgreen;
-}
-
-.technical {
-    background-color: indianred;
-}
-
-.physical {
-    background-color: dodgerblue;
-}
-
-.support {
-    background-color: gold;
 }
