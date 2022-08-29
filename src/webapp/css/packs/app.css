@@ -6,6 +6,23 @@
 @import "../components/help-tooltip.css";
 @import "../components/table.css";
 
+
+.training-cards.tactical {
+    background-color: forestgreen!important;
+}
+
+.training-cards.technical {
+    background-color: indianred!important;
+}
+
+.training-cards.physical {
+    background-color: dodgerblue!important;
+}
+
+.training-cards.support {
+    background-color: gold!important;
+}
+
 /* Grid */
 body > main {
     display: flex;
@@ -116,20 +133,4 @@ fieldset + * {
 
 .card-text{
     color: white;
-}
-
-.training-cards.tactical {
-    background-color: forestgreen!important;
-}
-
-.training-cards.technical {
-    background-color: indianred!important;
-}
-
-.training-cards.physical {
-    background-color: dodgerblue!important;
-}
-
-.training-cards.support {
-    background-color: gold!important;
 }
