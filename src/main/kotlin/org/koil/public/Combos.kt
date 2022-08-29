@@ -283,7 +283,10 @@ enum class Combo(
         Effects(kicking = -1, stamina = -4, toughness = 24, willpower = -2),
         hiddenCombo = true
     ),
-    SHADOW_STRIKER(listOf(Card.ANALYSIS, Card.SHOOTING, Card.SPA), Effects(kicking = 7, speed = 5, technique = 2, willpower = 2)),
+    SHADOW_STRIKER(
+        listOf(Card.ANALYSIS, Card.SHOOTING, Card.SPA),
+        Effects(kicking = 7, speed = 5, technique = 2, willpower = 2)
+    ),
     RAPID_DRIBBLING(listOf(Card.DRIBBLING, Card.VISUALISING), Effects(speed = 6, technique = 6, willpower = 4)),
     PINPOINT_PASS(listOf(Card.PASSING, Card.JUDO), Effects(speed = 6, technique = 4, willpower = 6)),
     WING_CHANGE(listOf(Card.ANALYSIS, Card.PLACEKICKS), Effects(kicking = 4, stamina = 6, willpower = 6)),
@@ -423,6 +426,9 @@ enum class Combo(
     fun total(): Int =
         effects.kicking + effects.speed + effects.stamina + effects.technique + effects.toughness + effects.jumping + effects.willpower
 
-    fun displayName(): String = name.replace("_", " ")
+    fun displayName(): String {
+        val keeperOnlyString = if (keeperOnly) " (GK)" else ""
+        return name.replace("_", " ") + keeperOnlyString
+    }
 }
 
