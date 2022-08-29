@@ -2,25 +2,23 @@
 @import "../themes/_theme.css";
 @import "../utlities/utilities.css";
 
-@import "../components/slide-menu.css";
-@import "../components/help-tooltip.css";
 @import "../components/table.css";
 
 
 .training-cards.tactical {
-    background-color: forestgreen!important;
+    background: forestgreen!important;
 }
 
 .training-cards.technical {
-    background-color: indianred!important;
+    background: indianred!important;
 }
 
 .training-cards.physical {
-    background-color: dodgerblue!important;
+    background: dodgerblue!important;
 }
 
 .training-cards.support {
-    background-color: gold!important;
+    background: gold!important;
 }
 
 /* Grid */
